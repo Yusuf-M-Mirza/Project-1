@@ -1,22 +1,23 @@
-<h1>Random Ass Project</h1>
+<h1>Pedals & Patterns: Analyzing Bike-Hire Usage in London</h1>
 
- ### [YouTube Demonstration](https://youtu.be/7eJexJVCqJo)
+ ### [Bike-Hire Dataset](https://www.kaggle.com/datasets/kalacheva/london-bike-share-usage-dataset)
 
 <h2>Description</h2>
-Project consists of a simple PowerShell script that walks the user through "zeroing out" (wiping) any drives that are connected to the system. The utility allows you to select the target disk and choose the number of passes that are performed. The PowerShell script will configure a diskpart script file based on the user's selections and then launch Diskpart to perform the disk sanitization.
+Within August 2023, there were 776,527 trips made with the Transport for London (TfL) Cycle Hire scheme. These trips were all recorded, with datapoints including: starting location, duration, ending location, as well as time-of-day. I hope to use exploratory data analysis techniques and translate raw data into actionable insights so as to improve the Cycle Hire service by TfL and improve the overall efficiency of public transport.
 <br />
 
 
-<h2>Languages and Utilities Used</h2>
+<h2>Tech Stack Used</h2>
 
-- <b>PowerShell</b> 
-- <b>Diskpart</b>
+- <b>Excel</b> 
+- <b>MySQL</b>
+- <b>Python</b>
 
 <h2>Environments Used </h2>
 
-- <b>Windows 10</b> (21H2)
+- <b>Windows 11</b>
 
-<h2>Program walk-through:</h2>
+<h2>Walkthrough</h2>
 
 <p align="center">
 Launch the utility: <br/>
