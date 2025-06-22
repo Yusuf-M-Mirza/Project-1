@@ -1,4 +1,4 @@
-<h1>Pedals & Patterns: Analyzing Bike-Hire Usage in London</h1>
+<h1>🚲 Pedals & Patterns: Analyzing Bike-Hire Usage in London</h1>
 
  ### [Bike-Hire Dataset](https://www.kaggle.com/datasets/kalacheva/london-bike-share-usage-dataset)
 
