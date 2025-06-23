@@ -69,6 +69,8 @@ As shown by the above graph, the theory I propsed was correct in that across the
 <hr style="margin: 20px 0;" />
 <img src="https://i.imgur.com/2Kr9rxU.png" height="45%" width="45%" alt="Disk Sanitization Steps"/>
 
+As shown in the graph, we can see how my proposed 'Peak Time Day Pass' would not be viable here due to the fact that at what would typically be morning rush-hour on a weekend is shown to actually be a time during the day when bike hire usage is at its lowest. Therefore, it can be said that if my suggestion was to be trialled, we would likely only see growth in bike hire during the weekday.
+
 
  ```diff
 - text in red
