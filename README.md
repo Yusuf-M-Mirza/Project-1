@@ -65,12 +65,21 @@ To properly optimise the TfL Cycle Hire, it is essential to gain an understandin
 <hr style="margin: 20px 0;" />
 <img src="https://i.imgur.com/TfWfZgl.png" height="45%" width="45%" alt="Disk Sanitization Steps"/>
 
-As shown by the above graph, the theory I propsed was correct in that across the weekdays, bike usage was greatest during rush-hour. It can be seen by the set of peaks in the interval of [07:00-09:00] and [17:00-19:00]. Additionally, we can see the least popular times to ride are in the earliest hours of the morning before 05:00. TfL currently runs a series of different pricings for Cycle Hire (https://tfl.gov.uk/modes/cycling/santander-cycles/what-you-pay). What I would propose is trialling a subset of the current Day Pass that is valid only during what TfL currently outlines as 'peak times' ([06:30-09:30], [16:00-19:00]). This could be even lower cost than the current £3.50, but could be offset by an increase in rider numbers. I also wanted to investigate how this distribution would change on the weekend. This is because we cannot assume peak usage would be during rush-hour due to the fact that on weekends, people do not commute to work during this time. Consequently, the graph produced was very different.
+As shown by the above graph, the theory I propsed was correct in that across the weekdays, bike usage was greatest during rush-hour. It can be seen by the set of peaks in the interval of [07:00-09:00] and [17:00-19:00]. Additionally, we can see the least popular times to ride are in the earliest hours of the morning before 05:00. TfL currently runs a series of different pricings for Cycle Hire (https://tfl.gov.uk/modes/cycling/santander-cycles/what-you-pay). What I would propose is trialling a subset of the current Day Pass that is valid only during what TfL currently outlines as 'peak times' ([06:30-09:30], [16:00-19:00]). This could be an even lower cost than the current £3.50, but it could be offset by an increase in rider numbers, thus reducing strain on other existing public transport networks whilst also promoting a low-cost carbon carbon-neutral method of travel. I also wanted to investigate how this distribution would change on the weekend. This is because we cannot assume peak usage would be during rush hour due to the fact that on weekends, people do not commute to work during this time. Consequently, the graph produced was very different.
 <hr style="margin: 20px 0;" />
 <img src="https://i.imgur.com/2Kr9rxU.png" height="45%" width="45%" alt="Disk Sanitization Steps"/>
 
-As shown in the graph, we can see how my proposed 'Peak Time Day Pass' would not be viable here due to the fact that at what would typically be morning rush-hour on a weekend is shown to actually be a time during the day when bike hire usage is at its lowest. Therefore, it can be said that if my suggestion was to be trialled, we would likely only see growth in bike hire during the weekday.
-
+As shown in the graph, we can see how my proposed 'Peak Time Day Pass' would not be viable here due to the fact that at what would typically be morning rush-hour on a weekend is shown to actually be a time during the day when bike hire usage is at its lowest. Therefore, it can be said that if my suggestion was to be trialled, we would likely only see growth in bike hire during the weekday. This data was derived using the below SQL query.
+```SQL
+SELECT
+    HOUR(start_date) AS Hour,
+    COUNT(start_date) AS Count
+FROM london_bikes.journeys
+WHERE DAYOFWEEK(start_date) IN (1,7)
+GROUP BY Hour
+ORDER BY Hour;
+```
+Continuing on with the idea of investigating rider frequency, I also wished to look into how external factors will affect the number of cycle hires within a day.
 
  ```diff
 - text in red
