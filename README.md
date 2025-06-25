@@ -70,7 +70,7 @@ As shown by the above graph, the theory I propsed was correct in that across the
 <hr style="margin: 20px 0;" />
 <img src="https://i.imgur.com/2Kr9rxU.png" height="45%" width="45%" alt="Disk Sanitization Steps"/>
 
-As shown in the graph, we can see how my proposed 'Peak Time Day Pass' would not be viable here due to the fact that at what would typically be morning rush-hour on a weekend is shown to actually be a time during the day when bike hire usage is at its lowest. Therefore, it can be said that if my suggestion was to be trialled, we would likely only see growth in bike hire during the weekday. This data was derived using the below SQL query.
+As shown in the graph, we can see how my proposed 'Peak Time Day Pass' would not be viable here due to the fact that at what would typically be morning rush-hour on a weekend is shown to actually be a time during the day when bike hire usage is at its lowest. Therefore, it can be said that if my suggestion was to be trialled, we would likely only see growth in bike hire during the weekday. This data was derived using the following SQL query.
 ```SQL
 SELECT
     HOUR(start_date) AS Hour,
@@ -80,14 +80,7 @@ WHERE DAYOFWEEK(start_date) IN (1,7)
 GROUP BY Hour
 ORDER BY Hour;
 ```
-Continuing on with the idea of investigating rider frequency, I also wished to look into how external factors will affect the number of cycle hires within a day. The reason for this came to reduce costs associated with collecting and redistributing bikes for hire. If we are able to make data-driven predictions as to how many bikes will be needed for a given day, we can aim to reduce associated costs such as fuel or employee time. My current hypothesis was that during August, as temperatures went up, we'd see a reduction in the number of riders, allowing us to create predictions based on the number of bikes that need to be distributed based on future weather forecasts.
+Continuing on with the idea of investigating rider frequency, I also wished to look into how external factors will affect the number of cycle hires within a day. The reason for this was to reduce the costs associated with collecting and redistributing bikes for hire. If we are able to make data-driven predictions as to how many bikes will be needed for a given day, we can aim to reduce associated costs such as fuel or employee time. My current hypothesis was that during August, as temperatures went up, we'd see a reduction in the number of riders, allowing us to create predictions based on the number of bikes that need to be distributed based on future weather forecasts.
 
-
- ```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
-```
---!>
+<h3>Weather</h3>
+In order to draw conclusions based on the weather, I had to find a source of weather data within the London area, as well as within the August 2023 timeframe. Luckily, it was not difficult to find such a dataset. Again, like how I did with the Bikes dataset, I would first begin by cleaning the data to ensure it is fit for purpose. Not only did I check for duplicates in the dataset, but I also checked to see if any data points were missing. Fortunately, the dataset came with a system to confirm to the user whether or not a piece of data was missing in that each column came with an accompanying 'quality' column. A value of 0 meant valid data, 1 meant suspect and 9 meant the data was missing.
