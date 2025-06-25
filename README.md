@@ -79,7 +79,8 @@ WHERE DAYOFWEEK(start_date) IN (1,7)
 GROUP BY Hour
 ORDER BY Hour;
 ```
-Continuing on with the idea of investigating rider frequency, I also wished to look into how external factors will affect the number of cycle hires within a day.
+Continuing on with the idea of investigating rider frequency, I also wished to look into how external factors will affect the number of cycle hires within a day. The reason for this came to reduce costs associated with collecting and redistributing bikes for hire. If we are able to make data-driven predictions as to how many bikes will be needed for a given day, we can aim to reduce associated costs such as fuel or employee time. My current hypothesis was that during August, as temperatures went up, we'd see a reduction in the number of riders, allowing us to create predictions based on the number of bikes that need to be distributed based on future weather forecasts.
+
 
  ```diff
 - text in red
