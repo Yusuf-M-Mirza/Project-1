@@ -83,4 +83,34 @@ ORDER BY Hour;
 Continuing on with the idea of investigating rider frequency, I also wished to look into how external factors will affect the number of cycle hires within a day. The reason for this was to reduce the costs associated with collecting and redistributing bikes for hire. If we are able to make data-driven predictions as to how many bikes will be needed for a given day, we can aim to reduce associated costs such as fuel or employee time. My current hypothesis was that during August, as temperatures went up, we'd see a reduction in the number of riders, allowing us to create predictions based on the number of bikes that need to be distributed based on future weather forecasts.
 
 <h3>Weather</h3>
-In order to draw conclusions based on the weather, I had to find a source of weather data within the London area, as well as within the August 2023 timeframe. Luckily, it was not difficult to find such a dataset. Again, like how I did with the Bikes dataset, I would first begin by cleaning the data to ensure it is fit for purpose. Not only did I check for duplicates in the dataset, but I also checked to see if any data points were missing. Fortunately, the dataset came with a system to confirm to the user whether or not a piece of data was missing in that each column came with an accompanying 'quality' column. A value of 0 meant valid data, 1 meant suspect and 9 meant the data was missing.
+In order to draw conclusions based on the weather, I had to find a source of weather data within the London area, as well as within the August 2023 timeframe. Luckily, it was not difficult to find such a dataset. Again, like how I did with the Bikes dataset, I would first begin by cleaning the data to ensure it is fit for purpose. Not only did I check for duplicates in the dataset, but I also checked to see if any data points were missing. Fortunately, the dataset came with a system to confirm to the user whether or not a piece of data was missing in that each column came with an accompanying 'quality' column. A value of 0 meant valid data, 1 meant suspect and 9 meant the data was missing. So I used Excels in-built filtering tool to filter out all the blank cells in the columns so it could be imported into MySQL Workbench.
+
+```SQL
+SELECT
+	   w.Day,
+    w.Temperature,
+    j.Total_Rides
+FROM
+	(SELECT
+		DAY(DATE) AS Day,
+		TG AS Temperature
+	FROM london_bikes.weather
+	WHERE YEAR(DATE)=2023 AND MONTH(DATE)=8
+	ORDER BY DAY) AS w
+    JOIN
+    (SELECT
+		DAY(start_date) AS Day,
+		COUNT(start_date) AS Total_Rides
+	FROM london_bikes.journeys
+	GROUP BY Day) AS j
+    ON w.Day=j.Day;
+```
+The above query gave me a table of the required data needed for me to create a graph and draw a conclusion as to whether or not there was a correlation between the temperature and the number of hires of TfL bikes. What I was expecting to see was a negative correlation between the two data points due to the temperature being _too_ hot to ride. The nature of the data made it difficult to represent appropriately with a line graph, so instead, I chose to create a Pearson correlation coefficient. The value obtained was 0.23 which, contrary to my hypothesis, shows a slight positive correlation between the two variables. This shows that people instead _choose_ to ride a bicycle more frequently in the heat. We can then use this information to plan out how many bikes TfL should distribute based on the local weather forecast knowing that a higher temperature will require more bikes.
+
+<hr style="margin: 20px 0;" />
+<h3>Distribution</h3>
+The distribution of the bikes is another factor that could be an area of improvement for TfL. By finding out where exactly bikes are unused, we could enact better distribution in order to best serve the general public. What I want to investigate is distribution across three timezones; morning rush hour, evening rush hour and the weekend. I hypothesize that if we were to cover up any inefficiencies during these three time periods it would be of immense benefit to the service as a whole.
+
+
+
+
