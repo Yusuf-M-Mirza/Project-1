@@ -109,7 +109,117 @@ The above query gave me a table of the required data needed for me to create a g
 
 <hr style="margin: 20px 0;" />
 <h3>Distribution</h3>
-The distribution of the bikes is another factor that could be an area of improvement for TfL. By finding out where exactly bikes are unused, we could enact better distribution in order to best serve the general public. What I want to investigate is distribution across three timezones; morning rush hour, evening rush hour and the weekend. I hypothesize that if we were to cover up any inefficiencies during these three time periods it would be of immense benefit to the service as a whole.
+The distribution of the bikes is another factor that could be an area of improvement for TfL. By finding out where exactly bikes are unused, we could enact better distribution in order to best serve the general public. What I want to investigate is distribution across three timezones; morning rush hour, evening rush hour and the weekend. I hypothesize that if we were to cover up any inefficiencies during these three time periods, it would be of immense benefit to the service as a whole.
+```SQL
+SELECT
+    COALESCE(am.station, pm.station) AS station,
+    COALESCE(am.starts_am, 0) AS starts_am,
+    COALESCE(am.ends_am, 0) AS ends_am,
+    COALESCE(pm.starts_pm, 0) AS starts_pm,
+    COALESCE(pm.ends_pm, 0) AS ends_pm,
+    (COALESCE(pm.ends_pm, 0) - COALESCE(am.starts_am, 0)) AS net_change
+FROM
+    -- AM Subquery
+    (
+        SELECT
+            station_name AS station,
+            SUM(CASE WHEN is_start = 1 THEN 1 ELSE 0 END) AS starts_am,
+            SUM(CASE WHEN is_start = 0 THEN 1 ELSE 0 END) AS ends_am
+        FROM (
+            SELECT
+                start_station_name AS station_name,
+                1 AS is_start
+            FROM london_bikes.journeys
+            WHERE HOUR(start_date) BETWEEN 6 AND 8
+              AND DAYOFWEEK(start_date) BETWEEN 2 AND 6
+
+            UNION ALL
+
+            SELECT
+                end_station_name AS station_name,
+                0 AS is_start
+            FROM london_bikes.journeys
+            WHERE HOUR(end_date) BETWEEN 6 AND 8
+              AND DAYOFWEEK(end_date) BETWEEN 2 AND 6
+        ) am_data
+        GROUP BY station_name
+    ) am
+
+-- PM Subquery
+LEFT JOIN
+    (
+        SELECT
+            station_name AS station,
+            SUM(CASE WHEN is_start = 1 THEN 1 ELSE 0 END) AS starts_pm,
+            SUM(CASE WHEN is_start = 0 THEN 1 ELSE 0 END) AS ends_pm
+        FROM (
+            SELECT
+                start_station_name AS station_name,
+                1 AS is_start
+            FROM london_bikes.journeys
+            WHERE HOUR(start_date) BETWEEN 17 AND 19
+              AND DAYOFWEEK(start_date) BETWEEN 2 AND 6
+
+            UNION ALL
+
+            SELECT
+                end_station_name AS station_name,
+                0 AS is_start
+            FROM london_bikes.journeys
+            WHERE HOUR(end_date) BETWEEN 17 AND 19
+              AND DAYOFWEEK(end_date) BETWEEN 2 AND 6
+        ) pm_data
+        GROUP BY station_name
+    ) pm ON am.station = pm.station
+
+-- Also get stations that only appear in PM
+UNION
+SELECT
+    pm.station,
+    0 AS starts_am,
+    0 AS ends_am,
+    COALESCE(pm.starts_pm, 0),
+    COALESCE(pm.ends_pm, 0),
+    (COALESCE(pm.ends_pm, 0)) AS net_change
+FROM (
+    SELECT
+        station_name AS station,
+        SUM(CASE WHEN is_start = 1 THEN 1 ELSE 0 END) AS starts_pm,
+        SUM(CASE WHEN is_start = 0 THEN 1 ELSE 0 END) AS ends_pm
+    FROM (
+        SELECT
+            start_station_name AS station_name,
+            1 AS is_start
+        FROM london_bikes.journeys
+        WHERE HOUR(start_date) BETWEEN 17 AND 19
+          AND DAYOFWEEK(start_date) BETWEEN 2 AND 6
+
+        UNION ALL
+
+        SELECT
+            end_station_name AS station_name,
+            0 AS is_start
+        FROM london_bikes.journeys
+        WHERE HOUR(end_date) BETWEEN 17 AND 19
+          AND DAYOFWEEK(end_date) BETWEEN 2 AND 6
+    ) pm_data
+    GROUP BY station_name
+) pm
+LEFT JOIN (
+    SELECT station FROM (
+        SELECT start_station_name AS station FROM london_bikes.journeys
+        WHERE HOUR(start_date) BETWEEN 6 AND 8
+          AND DAYOFWEEK(start_date) BETWEEN 2 AND 6
+        UNION
+        SELECT end_station_name AS station FROM london_bikes.journeys
+        WHERE HOUR(end_date) BETWEEN 6 AND 8
+          AND DAYOFWEEK(end_date) BETWEEN 2 AND 6
+    ) am_stations
+) am ON am.station = pm.station
+WHERE am.station IS NULL
+
+ORDER BY net_change DESC;
+```
 
 
 
