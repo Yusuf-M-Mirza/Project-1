@@ -117,8 +117,11 @@ As can be seen from the image shown, we have the stations that will end peak tim
 
 <img src="https://i.imgur.com/HmajoVO.png" height="55%" width="55%" alt="Disk Sanitization Steps"/>
 
-From the above image, you can also observe how the other extremity which is the stations that instead end peak-time having lost bikes. What I would propose for when vans come and during the night and collect the bikes is to specifically target stations for collection like Hyde Park Corner or Albert Gate and then deliberately redistribute extra bikes at Waterloo Station 2. This would then allow demand to be more evened out.
+From the above image, you can also observe how the other extremity which is the stations that instead end peak-time having lost bikes. What I would propose for when vans come and during the night and collect the bikes is to specifically target stations for collection like Hyde Park Corner or Albert Gate and then deliberately redistribute extra bikes at Waterloo Station 2. This would then allow demand to be more evened out. The MySQL query used to obtain these insights has been attached to repository and can easily be modified to analyse the weekend.
 
+<hr style="margin: 20px 0;" />
+<h2>Conclusion</h2>
 
+From the analysis conducted, we can conclude that the TfL Cycle Hire scheme, although running well, certainly has room for improvement. The areas of improvement include predicting the demand for bikes across London in order to minimise transport and maintenance costs, as well as predicting the distribution frequency of bikes across the Greater London area. It can be concluded that there is a positive correlation between temperature and bike hire frequency, as well as how different stations will experience different levels of accumulation of bicycles.
 
 
