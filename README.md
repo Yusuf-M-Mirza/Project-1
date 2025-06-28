@@ -111,13 +111,13 @@ The above query gave me a table of the required data needed for me to create a g
 <h3>Distribution</h3>
 The distribution of the bikes is another factor that could be an area of improvement for TfL. By finding out where exactly bikes are unused, we could enact better distribution in order to best serve the general public. What I want to investigate is distribution across three timezones; morning rush hour, evening rush hour and the weekend. I hypothesize that if we were to cover up any inefficiencies during these three time periods, it would be of immense benefit to the service as a whole. I wrote out a SQL query that would give me a table containing all stations within the dataset. It would also show the _average_ number of bikes arriving and leaving a station at both AM and PM peak times. Additionally, it would show me the average net change for each station so I can visually draw comparisons between stations.
 
-<img src="https://i.imgur.com/V4TAjwV.png" height="45%" width="45%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/jIPAd3o.png" height="55%" width="55%" alt="Disk Sanitization Steps"/>
 
 As can be seen from the image shown, we have the stations that will end peak time, having gained far more bikes than they originally started with. This issue could lead to larger problems like the overcrowding of bikes around the station due to a lack of docking bays. This could lead to bikes being parked on pedestrian walkways and as such, causing excessive crowding. Additionally, it could result in stations elsewhere in London being deprived of available bikes, meaning people who would otherwise hire a bike with TfL would instead take other forms of transport. This is far from what we would deem to be an optimal scenario for TfL Cycle Hire.
 
-<img src="https://i.imgur.com/HmajoVO.png" height="45%" width="45%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/HmajoVO.png" height="55%" width="55%" alt="Disk Sanitization Steps"/>
 
-From the above image, you can also observe how the other extremity which is the stations that instead end peak-time having lost bikes. What I would propose for when vans come and during the night and collect the bikes is to specifically target stations for collection like Hyde Park Corner or Albert Gate and then deliberately redistribute extra bikes at Waterloo Station 2. This would then allow demand to be more evend out.
+From the above image, you can also observe how the other extremity which is the stations that instead end peak-time having lost bikes. What I would propose for when vans come and during the night and collect the bikes is to specifically target stations for collection like Hyde Park Corner or Albert Gate and then deliberately redistribute extra bikes at Waterloo Station 2. This would then allow demand to be more evened out.
 
 
 
