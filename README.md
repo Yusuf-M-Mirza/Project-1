@@ -28,20 +28,28 @@ Insights and recommendations are provided on the following key areas:
 
 
 ## Data Structure & Initial Checks
-The database structure used consists of two tables that were used in this project. Their names were 'journeys' and 'weather' and are shown below
+The database structure used consists of two tables that were used in this project. Their names were 'journeys' and 'weather' and are shown below.
+<div align="center">
+  <img src="https://i.imgur.com/jwINRuN.png" alt="TfL Cycle Hire" width="400" />
+</div>
 
-## Tech Stack Used
+The dataset consists of a total of over 700,000 records spread across the two tables. Journeys consist of all bike hires and journeys that were made using the Cycle Hire scheme over the course of August 2023. Weather consists of a record of all weather records from 1979 to 2023.
+
+Prior to starting the data analysis, a series of checks were made through each table and dataset for quality-control and familiarization. The SQL queries utilised to inspect and perform quality checks can be found here.
+
+## Executive Summary
+### Overview of Findings
 
 - <b>Excel</b> 
 - <b>MySQL</b>
 - <b>Python</b>
 
-<h2>Environments Used </h2>
+## Environments Used
 
 - <b>Windows 11</b>
 
-<h2>Walkthrough</h2>
-<h3>Cleaning</h3>
+## Walkthrough
+### Cleaning
 
 Before beginning with any data analysis, I want to clean-up the data to ensure that it's fit for processing. What I first want to check is for any duplicates within the dataset which could potentially affect any results. I did this within MySQL using the following query.
 
@@ -85,8 +93,10 @@ To round up the data-cleaning, I thought about doing a statistical analysis to f
 
 <h3>Rider Frequency</h3>
 To properly optimise the TfL Cycle Hire, it is essential to gain an understanding as to both how and why the bikes are being used, thus enabling us to enact data-driven decisions that will produce real change. A theory I wanted to explore was the bikes were hired the most during rush hour of each weekday.
-<hr style="margin: 20px 0;" />
-<img src="https://i.imgur.com/TfWfZgl.png" height="45%" width="45%" alt="Disk Sanitization Steps"/>
+
+<div align="center">
+  <img src="https://i.imgur.com/TfWfZgl.png" alt="TfL Cycle Hire" width="500" />
+</div>
 
 As shown by the above graph, the theory I propsed was correct in that across the weekdays, bike usage was greatest during rush-hour. It can be seen by the set of peaks in the interval of [07:00-09:00] and [17:00-19:00]. Additionally, we can see the least popular times to ride are in the earliest hours of the morning before 05:00. TfL currently runs a series of different pricings for Cycle Hire (https://tfl.gov.uk/modes/cycling/santander-cycles/what-you-pay). What I would propose is trialling a subset of the current Day Pass that is valid only during what TfL currently outlines as 'peak times' ([06:30-09:30], [16:00-19:00]). This could be an even lower cost than the current £3.50, but it could be offset by an increase in rider numbers, thus reducing strain on other existing public transport networks whilst also promoting a low-cost carbon carbon-neutral method of travel. I also wanted to investigate how this distribution would change on the weekend. This is because we cannot assume peak usage would be during rush hour due to the fact that on weekends, people do not commute to work during this time. Consequently, the graph produced was very different.
 <hr style="margin: 20px 0;" />
