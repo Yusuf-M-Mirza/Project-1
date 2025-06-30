@@ -9,7 +9,7 @@ Trandport for London (TfL) launched their Cycle Hire scheme at the end of July o
 Insights and recommendations are provided on the following key areas:
  - <b>Trends in Hire Times:</b> Evaluation of historical usage of bikes to identify which hours of each day are the most popular, thus providing an opportunity upon which can be capitalized.
  - <b>Impact of Weather on Hiring Frequency:</b> Identifying trends in bike hire in relation to changes in weather. Finding correlations could lead to being able to better forecast how often bikes will be used, leading to alterations in service to boost efficiency.
- - <b>Identifying Opportunities for Redistribution:</b> 
+ - <b>Opportunities for Redistribution:</b>To identify opportunities for redistribution would allow TfL to cover any gaps in bike availability across its 800 docking stations throughout the day.
 <br />
 
 
