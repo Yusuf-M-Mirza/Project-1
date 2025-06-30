@@ -7,7 +7,9 @@
 Trandport for London (TfL) launched their Cycle Hire scheme at the end of July of 2010. It was aimed to promote biking as a healthy and sustainable form of transport across London. Since then, TfL has gathered significant quantities of data on the usage of these bikes for the starting date-time, ending date-time as well as the location of the stations where the bike was removed and then later docked. We could also see the different types of bikes that were used as well as the duration of the hire. This project aims to thoroughly analyze and synthesize this data in order to uncover critical insights that will improve the efficiency and attraction of the TfL Cycle Hire scheme.
 
 Insights and recommendations are provided on the following key areas:
- - <b>Trends in </b>
+ - <b>Trends in Hire Times:</b> Evaluation of historical usage of bikes to identify which hours of each day are the most popular, thus providing an opportunity upon which can be capitalized.
+ - <b>Impact of Weather on Hiring Frequency:</b> Identifying trends in bike hire in relation to changes in weather. Finding correlations could lead to being able to better forecast how often bikes will be used, leading to alterations in service to boost efficiency.
+ - <b>Identifying Opportunities for Redistribution:</b> 
 <br />
 
 
