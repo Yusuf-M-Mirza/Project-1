@@ -3,8 +3,11 @@
  ### [Bike-Hire Dataset](https://www.kaggle.com/datasets/kalacheva/london-bike-share-usage-dataset)
  ### [Weather Dataset](https://www.kaggle.com/datasets/zongaobian/london-weather-data-from-1979-to-2023?resource=download)
 
-<h2>Description</h2>
-Within August 2023, there were 776,527 trips made with the Transport for London (TfL) Cycle Hire scheme. These trips were all recorded, with datapoints including: starting location, duration, ending location, as well as time-of-day. I hope to use exploratory data analysis techniques and translate raw data into actionable insights so as to improve the Cycle Hire service by TfL and boost the overall efficiency of public transport.
+<h2>Project Background</h2>
+Trandport for London (TfL) launched their Cycle Hire scheme at the end of July of 2010. It was aimed to promote biking as a healthy and sustainable form of transport across London. Since then, TfL has gathered significant quantities of data on the usage of these bikes for the starting date-time, ending date-time as well as the location of the stations where the bike was removed and then later docked. We could also see the different types of bikes that were used as well as the duration of the hire. This project aims to thoroughly analyze and synthesize this data in order to uncover critical insights that will improve the efficiency and attraction of the TfL Cycle Hire scheme.
+
+Insights and recommendations are provided on the following key areas:
+ - <b>Trends in </b>
 <br />
 
 
