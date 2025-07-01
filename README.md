@@ -39,14 +39,19 @@ Prior to starting the data analysis, a series of checks were made through each t
 
 ## Executive Summary
 ### Overview of Findings
+### Trends In Hiring Times
+- **During the weekdays the frequency of bicycle hires peaks at two time periods in the day.** These correspond to the peak times outlined by TfL when running other public transportation which are between 6:30 and 9:30 AM as well as between 4:30 and 7:30 PM. On average these peak at around [insert-number] during the morning and [insert-number] in the evening.
+  
+- We can then assume that for the weekdays, commuters make up [insert-percentage]% of total bike hires.
+  
+- **The weekend shows a far wider distribution.** It is most likely due to a change in _how_ the bikes are being used. Unlike being used as a commuting tool, they are more commonly used as a means of leisure travel. [insert-numbers]
 
-- <b>Excel</b> 
-- <b>MySQL</b>
-- <b>Python</b>
+### Impact of Weather On Hiring Frequency
+- **A positive correlation is shown between temperature and bike hires.**
 
-## Environments Used
+- **Other Stuff**
 
-- <b>Windows 11</b>
+### Gaps in Distribution
 
 ## Walkthrough
 ### Cleaning
