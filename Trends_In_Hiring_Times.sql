@@ -59,4 +59,4 @@ FROM
 	GROUP BY hour_of_day
 	ORDER BY hour_of_day) w2
     ON w1.hour_of_day=w2.hour_of_day
-
+;
