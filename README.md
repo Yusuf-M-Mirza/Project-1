@@ -46,6 +46,11 @@ Prior to starting the data analysis, a series of checks were made through each t
   
 - **The weekend shows a far wider distribution.** It is most likely due to a change in _how_ the bikes are being used. Unlike being used as a commuting tool, they are more commonly used as a means of leisure travel. [insert-numbers]
 
+<p align="center">
+  <img src="https://i.imgur.com/9ZN0KNI.png" alt="TfL Cycle Hire" width="500" />
+</p>
+
+
 ### Impact of Weather On Hiring Frequency
 - **A positive correlation is shown between temperature and bike hires.**
 
