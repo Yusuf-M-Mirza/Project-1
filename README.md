@@ -26,6 +26,8 @@ Insights and recommendations are provided on the following key areas:
 - **Opportunities for Redistribution:**  
   Identifying opportunities for bike redistribution to cover gaps in availability across the 800 docking stations throughout the day.
 
+SQL queries regarding to trends in the hiring times of bikes can be found [here](https://github.com/Yusuf-M-Mirza/Project-1/blob/main/Trends_In_Hiring_Times.sql).
+
 
 ## Data Structure & Initial Checks
 The database structure used consists of two tables that were used in this project. Their names were 'journeys' and 'weather' and are shown below.
