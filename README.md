@@ -40,11 +40,13 @@ Prior to starting the data analysis, a series of checks were made through each t
 ## Executive Summary
 ### Overview of Findings
 ### Trends In Hiring Times
-- **During the weekdays the frequency of bicycle hires peaks at two time periods in the day.** These correspond to the peak times outlined by TfL when running other public transportation which are between 6:30 and 9:30 AM as well as between 4:30 and 7:30 PM. On average these peak at around [insert-number] during the morning and [insert-number] in the evening.
+- **During the weekdays the frequency of bicycle hires peaks at two time periods in the day.** These correspond to the peak times outlined by TfL when running other public transportation which are between 6:30 and 9:30 AM as well as between 4:30 and 7:30 PM. On average, these peak at around **2737 hires** during the morning and **3000 hires** in the evening.
   
-- We can then assume that for the weekdays, commuters make up [insert-percentage]% of total bike hires.
+- Commuters make up **60.06%** of total bike hires during the working week.
   
-- **The weekend shows a far wider distribution.** It is most likely due to a change in _how_ the bikes are being used. Unlike being used as a commuting tool, they are more commonly used as a means of leisure travel. [insert-numbers]
+- **The weekend shows a far wider distribution.** It is most likely due to a change in _how_ the bikes are being used. Unlike being used as a commuting tool, where people will hire them at set times to arrive at their workplace, they are more commonly used as a means of leisure travel.
+
+- **Peak hours are between 12 and 6 PM with a consistent number of 1500 bikes being hired per hour**. However, compared to the weekdays, the weekend will see a **26.63% decrease** in total hires.
 
 <p align="center">
   <img src="https://i.imgur.com/9ZN0KNI.png" alt="TfL Cycle Hire" width="500" />
