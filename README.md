@@ -28,6 +28,8 @@ Insights and recommendations are provided on the following key areas:
 
 SQL queries regarding to trends in the hiring times of bikes can be found [here](https://github.com/Yusuf-M-Mirza/Project-1/blob/main/Trends_In_Hiring_Times.sql).
 
+SQL queries regarding to how the weather will affect the frequency of hires can be found [here]().
+
 
 ## Data Structure & Initial Checks
 The database structure used consists of two tables that were used in this project. Their names were 'journeys' and 'weather' and are shown below.
@@ -56,9 +58,13 @@ Prior to starting the data analysis, a series of checks were made through each t
 
 
 ### Impact of Weather On Hiring Frequency
-- **A positive correlation is shown between temperature and bike hires.**
+- **A positive correlation is shown between temperature and bike hires.** Although weak, it can be linked to a Pearson correlation coefficient of **0.23** thus concluding people will hire more bikes as the temperature increases.
 
-- **Other Stuff**
+- **A negative correlation is shown between rainfall and bike hires** It is somewhat stronger than the Pearson correlation coefficient for temperature. It stands at **-0.49.** We can then more confidently say that more rainfall will result in fewer bikes being hired throughout the entire day.
+
+<div align="center">
+  <img src="https://i.imgur.com/O6DeRDd.png" alt="TfL Cycle Hire" width="500" />
+</div>
 
 ### Gaps in Distribution
 
