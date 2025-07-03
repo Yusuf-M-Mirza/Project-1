@@ -20,3 +20,4 @@ FROM
     WHERE DAYOFWEEK(start_date) IN (1,2,3,4,5,6,7)
 	GROUP BY Day) AS j
     ON w.Day=j.Day
+;
