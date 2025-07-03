@@ -28,7 +28,7 @@ Insights and recommendations are provided on the following key areas:
 
 SQL queries regarding to trends in the hiring times of bikes can be found [here](https://github.com/Yusuf-M-Mirza/Project-1/blob/main/Trends_In_Hiring_Times.sql).
 
-SQL queries regarding to how the weather will affect the frequency of hires can be found [here]().
+SQL queries regarding to how the weather will affect the frequency of hires can be found [here](https://github.com/Yusuf-M-Mirza/Project-1/blob/main/Impact_Of_Weather_On_Hiring_Frequency.sql).
 
 
 ## Data Structure & Initial Checks
