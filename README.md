@@ -30,6 +30,8 @@ SQL queries regarding to trends in the hiring times of bikes can be found [here]
 
 SQL queries regarding to how the weather will affect the frequency of hires can be found [here](https://github.com/Yusuf-M-Mirza/Project-1/blob/main/Impact_Of_Weather_On_Hiring_Frequency.sql).
 
+SQL queries to find gaps in the distribution of bikes can be found [here](https://github.com/Yusuf-M-Mirza/Project-1/blob/main/Gaps_In_Distribution.sql)
+
 
 ## Data Structure & Initial Checks
 The database structure used consists of two tables that were used in this project. Their names were 'journeys' and 'weather' and are shown below.
