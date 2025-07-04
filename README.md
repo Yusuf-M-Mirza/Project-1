@@ -67,7 +67,7 @@ Prior to starting the data analysis, a series of checks were made through each t
 </div>
 
 ### Gaps in Distribution
-- **Major deficits appear at the most popular station**. Waterloo Station 2 consistently will lose **27** bikes a day. Resulting in a **46.2%** _decrease_ in quantity of bikes.
+- **Major deficits appear at the most popular station**. Waterloo Station 2 consistently will lose **27** bikes a day. Resulting in a **46.2%** _decrease_ in the quantity of bikes.
 
 - **A large excess of bikes at other stations**. Hyde Park Coner and Albert Gate both experienced a massive increase in total number of bikes topping at a **911.8%** and **1466.7%** increase, respectively.
 
@@ -81,6 +81,10 @@ Prior to starting the data analysis, a series of checks were made through each t
 # Recommendations
 Based on current insights, the following recommendations have been provided:
 
-- 
+- Since during the week most of the cycle hires are by commuters during peak hours only, we should explore ways to lower the barrier to entry for bikes. This would maximise their usage and take strain away from the other transport forms. We could implement a system where similar to buses and trains, users could swipe their card to begin and end their journey and be billed the same way. This would be a far smoother process than having commuters use their phone to pay for bike use separately.
+
+- We could use the historical data on weather patterns affecting bike hire to make predictions into the future as to how many bikes are required by commuters daily. That way, we could optimally balance between having _too many_ bikes and having _too few_. Working proactively like this instead of reactively would produce far greater results as it means we can increase the _speed_ at which we operate.
+
+- By monitoring where we have gaps in distribution, we can again enable people as much as possible to choose bikes over other modes of transport. This could be done by again be proactive instead of reactive. By modelling how and where bikes will move around London, we can create a plan to give to couriers to follow on a day-by-day basis. So instead of operating only at night, they could instead be transporting bikes throughout peak hours to maximise availability and minimise build-up. 
 
 
