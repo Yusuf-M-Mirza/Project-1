@@ -45,6 +45,14 @@ Prior to starting the data analysis, a series of checks were made through each t
 
 ## Executive Summary
 ### Overview of Findings
+The analysis of over 700,000 bike hire records from August 2023, along with historic London weather data, revealed three major insights into user behaviour and system performance:
+
+- Bike usage strongly follows commuter patterns. On weekdays, hires peak at ~2,737 bikes between 6:30–9:30 AM and ~3,000 bikes between 4:30–7:30 PM, aligning with London’s traditional rush hours. Around 60.06% of weekday hires are commuter-driven. On weekends, usage shifts toward leisure, with a consistent 1,500 hires/hour from 12–6 PM, despite an overall 26.63% drop in total hires compared to weekdays.
+
+- Weather conditions noticeably influence hire frequency. Warmer days correlate with increased hires (r = 0.44), while rainfall shows a stronger negative effect (r = -0.43), indicating that people are significantly less likely to rent bikes in wet conditions.
+
+- Bike availability is inconsistent across docking stations. High-traffic hubs like Waterloo Station 2 lose an average of 27 bikes per day, a 46.2% decrease in bike stock, while others — such as Hyde Park Corner and Albert Gate — show excessive accumulation, with stock levels rising by 911.8% and 1466.7% respectively. These imbalances could hinder accessibility and create bottlenecks during peak times.
+
 ### Trends In Hiring Times
 - **During the weekdays the frequency of bicycle hires peaks at two time periods in the day.** These correspond to the peak times outlined by TfL when running other public transportation which are between 6:30 and 9:30 AM as well as between 4:30 and 7:30 PM. On average, these peak at around **2737 hires** during the morning and **3000 hires** in the evening.
   
