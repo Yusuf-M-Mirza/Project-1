@@ -26,12 +26,13 @@ Insights and recommendations are provided on the following key areas:
 - **Opportunities for Redistribution:**  
   Identifying opportunities for bike redistribution to cover gaps in availability across the 800 docking stations throughout the day.
 
+SQL queries to clean and process both the Bike-Hire and Weather datasets can be found [here](https://github.com/Yusuf-M-Mirza/Project-1/blob/main/Cleaning_Datasets.sql). The start_date and end_date columns both had their DATETIME rows in an incompatible MM/DD/YYYY HH:MM:SS format. The Weather dataset also had it's DATE in the incorrect format of YYYYMMDD. The python program to correct both of these can be found [here](https://github.com/Yusuf-M-Mirza/Project-1/blob/main/LondonDataRemapper.py).
+
 SQL queries regarding to trends in the hiring times of bikes can be found [here](https://github.com/Yusuf-M-Mirza/Project-1/blob/main/Trends_In_Hiring_Times.sql).
 
 SQL queries regarding to how the weather will affect the frequency of hires can be found [here](https://github.com/Yusuf-M-Mirza/Project-1/blob/main/Impact_Of_Weather_On_Hiring_Frequency.sql).
 
-SQL queries to find gaps in the distribution of bikes can be found [here](https://github.com/Yusuf-M-Mirza/Project-1/blob/main/Gaps_In_Distribution.sql)
-
+SQL queries to find gaps in the distribution of bikes can be found [here](https://github.com/Yusuf-M-Mirza/Project-1/blob/main/Gaps_In_Distribution.sql).
 
 ## Data Structure & Initial Checks
 The database structure used consists of two tables that were used in this project. Their names were 'journeys' and 'weather' and are shown below.
