@@ -96,12 +96,11 @@ Based on current insights, the following recommendations have been provided:
 
 - Since during the week most of the cycle hires are by commuters during peak hours only, we should explore ways to lower the barrier to entry for bikes. This would maximise their usage and take strain away from the other transport forms. We could implement a system where similar to buses and trains, users could swipe their Oyster card to begin and end their journey and be billed on any Travelcards they may have purchased. This would be a far smoother process than having commuters pay for bike use separately as (according to this [link](https://www.london.gov.uk/who-we-are/what-london-assembly-does/questions-mayor/find-an-answer/travelcards-4)) there are around a million Travelcards currently in use that account for 35% of all TfL journeys.
 
-- We could use the historical data on weather patterns affecting bike hire to make predictions into the future as to how many bikes are required by commuters daily. That way, we could optimally balance between having _too many_ bikes and having _too few_. Working proactively like this instead of reactively would produce far greater results as it means we can increase the _speed_ at which we operate.
+- We could use the historical data on weather patterns affecting bike hire to make predictions into the future as to how many bikes are required by commuters daily using multivariate linear regression. That way, we could optimally balance between having _too many_ bikes and having _too few_. Working proactively like this instead of reactively would produce far greater results as it means we can increase the _speed_ at which we operate.
 <div align="center">
   <img src="https://i.imgur.com/WPp6GNi.png" alt="TfL Cycle Hire" width="650" />
 </div>
 
-
-- By monitoring where we have gaps in distribution, we can again enable people as much as possible to choose bikes over other modes of transport. This could be done by again be proactive instead of reactive. By modelling how and where bikes will move around London, we can create a plan to give to couriers to follow on a day-by-day basis. So instead of operating only at night, they could instead be transporting bikes throughout peak hours to maximise availability and minimise build-up. 
+- By monitoring where we have gaps in distribution, we can again enable people as much as possible to choose bikes over other modes of transport. This could be done by being proactive instead of reactive. By modelling how and where bikes will move around London, we can create a plan to give to couriers to follow on a day-by-day basis. So instead of operating only at night, they could instead be transporting bikes throughout peak hours to maximise availability and minimise build-up. 
 
 
