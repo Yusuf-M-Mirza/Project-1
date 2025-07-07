@@ -26,6 +26,8 @@ Insights and recommendations are provided on the following key areas:
 - **Opportunities for Redistribution:**  
   Identifying opportunities for bike redistribution to cover gaps in availability across the 800 docking stations throughout the day.
 
+An Excel dashboard to predict the quantity of bikes required across London based upon temperature and precipitation forecast can be downloaded [here](https://github.com/Yusuf-M-Mirza/Project-1/blob/main/Forecasting_Dashboard.xlsx).
+
 SQL queries to clean and process both the Bike-Hire and Weather datasets can be found [here](https://github.com/Yusuf-M-Mirza/Project-1/blob/main/Cleaning_Datasets.sql). The start_date and end_date columns both had their DATETIME rows in an incompatible MM/DD/YYYY HH:MM:SS format. The Weather dataset also had it's DATE in the incorrect format of YYYYMMDD. The python program to correct both of these can be found [here](https://github.com/Yusuf-M-Mirza/Project-1/blob/main/LondonDataRemapper.py).
 
 SQL queries regarding to trends in the hiring times of bikes can be found [here](https://github.com/Yusuf-M-Mirza/Project-1/blob/main/Trends_In_Hiring_Times.sql).
@@ -95,6 +97,10 @@ Based on current insights, the following recommendations have been provided:
 - Since during the week most of the cycle hires are by commuters during peak hours only, we should explore ways to lower the barrier to entry for bikes. This would maximise their usage and take strain away from the other transport forms. We could implement a system where similar to buses and trains, users could swipe their card to begin and end their journey and be billed the same way. This would be a far smoother process than having commuters use their phone to pay for bike use separately.
 
 - We could use the historical data on weather patterns affecting bike hire to make predictions into the future as to how many bikes are required by commuters daily. That way, we could optimally balance between having _too many_ bikes and having _too few_. Working proactively like this instead of reactively would produce far greater results as it means we can increase the _speed_ at which we operate.
+<div align="center">
+  <img src="https://i.imgur.com/WPp6GNi.png" alt="TfL Cycle Hire" width="650" />
+</div>
+
 
 - By monitoring where we have gaps in distribution, we can again enable people as much as possible to choose bikes over other modes of transport. This could be done by again be proactive instead of reactive. By modelling how and where bikes will move around London, we can create a plan to give to couriers to follow on a day-by-day basis. So instead of operating only at night, they could instead be transporting bikes throughout peak hours to maximise availability and minimise build-up. 
 
