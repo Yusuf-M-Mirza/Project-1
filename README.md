@@ -71,7 +71,7 @@ The analysis of over 700,000 bike hire records from August 2023, along with hist
 
 
 ### Impact of Weather On Hiring Frequency
-- **A positive correlation is shown between temperature and bike hires.**Although weak, it can be linked to a Pearson correlation coefficient of 0.44, thus concluding that people will hire more bikes as the temperature increases.**
+- **A positive correlation is shown between temperature and bike hires.** Although weak, it can be linked to a Pearson correlation coefficient of 0.44, thus concluding that people will hire more bikes as the temperature increases.
 
 - **A negative correlation is shown between rainfall and bike hires** It is somewhat stronger than the Pearson correlation coefficient for temperature. It stands at **-0.43.** We can then more confidently say that more rainfall will result in fewer bikes being hired throughout the entire day.
 
